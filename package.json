@@ -1,13 +1,24 @@
 {
-  "name": "vue2-enterprise-starter",
+  "name": "vue-enterprise-starter",
+  "description": "Vue2 project boilerplate for enterprise scale applications.",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "author": "Tamás Gerényi <getamas04@gmail.com> (https://tamasgerenyi.netlify.app)",
+  "repository": "https://github.com/getamas/vue-enterprise-starter",
+  "bugs": {
+    "url": "https://github.com/getamas/vue-enterprise-starter/issues"
+  },
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "vue-cli-service serve --mode development",
+    "build": "vue-cli-service build --mode production",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint"
+  },
+  "engines": {
+    "node": "^10.13 || 12 || 14",
+    "npm": ">=6"
   },
   "dependencies": {
     "core-js": "^3.6.5",
