@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import PageTitle from '@/components/PageTitle/PageTitle.vue'
+import PageTitle from '@/app/components/PageTitle/PageTitle.vue'
 
 describe('@components/PageTitle.vue', () => {
   it('renders props.title when passed', () => {
