@@ -1,7 +1,8 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
+    jest: true
   },
   extends: ['plugin:vue/essential', 'eslint:recommended', '@vue/prettier'],
   parserOptions: {
@@ -15,9 +16,18 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/__tests__/*.{j,t}s?(x)', '**/tests/unit/**/*.spec.{j,t}s?(x)'],
-      env: {
-        jest: true
+      files: ['**/__tests__/*.{j,t}s?(x)', '**/tests/unit/**/*.spec.{j,t}s?(x)', '**/*.spec.js'],
+      parserOptions: {
+        parser: 'babel-eslint',
+        sourceType: 'module'
+      },
+      env: { jest: true },
+      globals: {
+        mount: false,
+        shallowMount: false,
+        shallowMountView: false,
+        createComponentMocks: false,
+        createModuleStore: false
       }
     }
   ]

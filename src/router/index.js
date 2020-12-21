@@ -3,7 +3,14 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-const routes = []
+import HomePage from '@/views/Home'
+
+const routes = [
+  {
+    path: '/',
+    component: HomePage
+  }
+]
 
 const router = new VueRouter({
   mode: 'history',
