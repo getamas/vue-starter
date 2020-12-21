@@ -1,13 +1,13 @@
 <template>
   <Layout>
     <PageTitle title="Home Page" />
-    <img src="@/assets/images/logo.png" alt="Logo" />
+    <img src="@/app/assets/images/logo.png" alt="Logo" />
   </Layout>
 </template>
 
 <script>
-import Layout from '@/layouts/Main.vue'
-import PageTitle from '@/components/PageTitle/PageTitle.vue'
+import Layout from '@/app/layouts/Main.vue'
+import PageTitle from '@/app/components/PageTitle/PageTitle.vue'
 
 export default {
   name: 'Home',

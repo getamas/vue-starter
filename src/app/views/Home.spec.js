@@ -1,5 +1,5 @@
 import Home from './Home.vue'
-import PageTitle from '@/components/PageTitle/PageTitle.vue'
+import PageTitle from '@/app/components/PageTitle/PageTitle.vue'
 
 describe('@views/home', () => {
   it('is a valid view', () => {

@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-import HomePage from '@/views/Home'
+import HomePage from '@/app/views/Home'
 
 const routes = [
   {
