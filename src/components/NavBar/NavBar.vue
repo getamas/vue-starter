@@ -1,9 +1,9 @@
 <template>
-  <header>
-    <ul class="nav-bar">
+  <nav :class="$style.nav">
+    <ul>
       <NavBarItem v-for="route in routes" :key="route.name" :route="route" />
     </ul>
-  </header>
+  </nav>
 </template>
 
 <script>
@@ -24,3 +24,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" module>
+.nav {
+  ul {
+    list-style-type: none;
+  }
+}
+</style>

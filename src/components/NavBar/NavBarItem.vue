@@ -1,6 +1,6 @@
 <template>
-  <li class="nav-bar-item">
-    <RouterLink :to="{ name: route.name }" exact-active-class="is-active">
+  <li>
+    <RouterLink :to="{ name: route.name }" :exact-active-class="$style.active">
       {{ route.title }}
     </RouterLink>
   </li>
@@ -19,8 +19,8 @@ export default {
 }
 </script>
 
-<style scoped>
-.is-active {
+<style lang="scss" module>
+.active {
   font-weight: bold;
   text-decoration: none;
   color: #39a275;
