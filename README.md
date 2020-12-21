@@ -1,4 +1,4 @@
-# vue-enterprise-starter
+# vue-starter
 
 ## Project setup
 

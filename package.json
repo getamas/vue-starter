@@ -1,13 +1,13 @@
 {
   "name": "vue-starter",
-  "description": "Vue2 project boilerplate for enterprise scale applications.",
+  "description": "Vue2 project boilerplate for large scale applications.",
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
   "author": "Tamás Gerényi <getamas04@gmail.com> (https://tamasgerenyi.netlify.app)",
-  "repository": "https://github.com/getamas/vue-enterprise-starter",
+  "repository": "https://github.com/getamas/vue-starter",
   "bugs": {
-    "url": "https://github.com/getamas/vue-enterprise-starter/issues"
+    "url": "https://github.com/getamas/vue-starter/issues"
   },
   "scripts": {
     "serve": "vue-cli-service serve --mode development",
@@ -20,7 +20,7 @@
     "docs:build": "vuepress build docs"
   },
   "engines": {
-    "node": "^10.13 || 12 || 14",
+    "node": ">=10.13.3",
     "npm": ">=6"
   },
   "dependencies": {
