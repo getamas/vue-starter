@@ -1,4 +1,4 @@
-import NavBar from './nav-bar'
+import NavBar from './nav-bar.vue'
 
 describe('@components/nav-bar', () => {
   it('exports a valid component', () => {

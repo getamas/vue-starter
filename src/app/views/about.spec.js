@@ -1,4 +1,4 @@
-import About from './about'
+import About from './about.vue'
 
 describe('@views/about', () => {
   it('is a valid view', () => {

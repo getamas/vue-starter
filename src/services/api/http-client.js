@@ -17,6 +17,7 @@ const singularResponseHandler = async response =>
   })
 
 const generalErrorHandler = error => {
+  // eslint-disable-next-line prefer-promise-reject-errors
   return Promise.reject({
     errStatus: error.response.status,
     errData: error.response.data,
