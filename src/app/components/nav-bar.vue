@@ -1,15 +1,3 @@
-<template>
-  <nav :class="$style.nav">
-    <ul>
-      <li v-for="route in routes" :key="route.name">
-        <RouterLink :to="{ name: route.name }" :exact-active-class="$style.active">
-          {{ route.title }}
-        </RouterLink>
-      </li>
-    </ul>
-  </nav>
-</template>
-
 <script>
 export default {
   data() {
@@ -28,6 +16,18 @@ export default {
   }
 }
 </script>
+
+<template>
+  <nav :class="$style.nav">
+    <ul>
+      <li v-for="route in routes" :key="route.name">
+        <RouterLink :to="{ name: route.name }" :exact-active-class="$style.active">
+          {{ route.title }}
+        </RouterLink>
+      </li>
+    </ul>
+  </nav>
+</template>
 
 <style lang="scss" module>
 .nav {

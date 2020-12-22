@@ -1,9 +1,3 @@
-<template>
-  <div id="app">
-    <RouterView />
-  </div>
-</template>
-
 <script>
 import appConfig from '@/app/app.config.json'
 
@@ -16,6 +10,12 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div id="app">
+    <RouterView />
+  </div>
+</template>
 
 <style lang="scss">
 @import '~normalize.css/normalize.css';
