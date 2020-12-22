@@ -4,7 +4,7 @@ import Layout from '@/app/layouts/main.vue'
 export default {
   page: {
     title: 'About',
-    meta: [{ name: 'description', content: 'The About page.' }],
+    meta: [{ name: 'description', content: 'The About page.' }]
   },
   components: { Layout }
 }
@@ -16,6 +16,4 @@ export default {
   </Layout>
 </template>
 
-<style lang="scss" module>
-</style>
-
+<style lang="scss" module></style>
