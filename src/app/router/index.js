@@ -5,13 +5,18 @@ import VueMeta from 'vue-meta'
 Vue.use(VueRouter)
 Vue.use(VueMeta, { keyName: 'page' })
 
-import HomePage from '@/app/views/Home'
+import HomePage from '@/app/views/home'
 
 const routes = [
   {
     path: '/',
     name: 'home',
     component: HomePage
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: () => import(/* webpackChunkName: "about" */ '@/app/views/about.vue')
   }
 ]
 

@@ -1,6 +1,6 @@
-import NavBar from './NavBar'
+import NavBar from './nav-bar'
 
-describe('@components/NavBar', () => {
+describe('@components/nav-bar', () => {
   it('exports a valid component', () => {
     expect(NavBar).toBeAComponent()
   })

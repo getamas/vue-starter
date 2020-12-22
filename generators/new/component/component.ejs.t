@@ -1,5 +1,5 @@
 ---
-to: "src/app/components/<%= name %>.vue"
+to: "src/app/components/<%= h.changeCase.kebab(name) %>.vue"
 ---
 <%
 if (blocks.indexOf('script') !== -1) {

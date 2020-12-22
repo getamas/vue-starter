@@ -12,13 +12,16 @@
 
 <script>
 export default {
-  name: 'NavBar',
   data() {
     return {
       routes: [
         {
           name: 'home',
           title: 'Home'
+        },
+        {
+          name: 'about',
+          title: 'About'
         }
       ]
     }

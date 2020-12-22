@@ -1,5 +1,5 @@
 ---
-to: "src/app/layouts/<%= name %>.vue"
+to: "src/app/layouts/<%= h.changeCase.kebab(name) %>.vue"
 ---
 <template>
   <div :class="$style.container">

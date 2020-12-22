@@ -1,5 +1,5 @@
 ---
-to: "src/app/views/<%= name %>.vue"
+to: "src/app/views/<%= h.changeCase.kebab(name) %>.vue"
 ---
 <%
   const titleName = h.changeCase.title(name)

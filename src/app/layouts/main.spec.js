@@ -1,6 +1,6 @@
-import MainLayout from './Main.vue'
+import MainLayout from './main.vue'
 
-describe('@layouts/Main.vue', () => {
+describe('@layouts/main.vue', () => {
   it('renders its content', () => {
     const slotContent = '<p>Hello!</p>'
     const { element } = shallowMount(MainLayout, {
