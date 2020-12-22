@@ -1,22 +1,31 @@
 module.exports = {
   root: true,
   env: {
-    node: true,
-    jest: true
+    node: true
   },
-  extends: ['plugin:vue/essential', 'eslint:recommended', '@vue/prettier'],
   parserOptions: {
+    sourceType: 'script',
     parser: 'babel-eslint',
     ecmaVersion: 2020
   },
+  extends: ['plugin:vue/recommended', 'eslint:recommended', '@vue/airbnb', '@vue/prettier'],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-unused-vars': 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
   },
   overrides: [
     {
-      files: ['**/__tests__/*.{j,t}s?(x)', '**/tests/unit/**/*.spec.{j,t}s?(x)', '**/*.spec.js'],
+      files: ['src/**/*', 'tests/unit/**/*', 'tests/e2e/**/*'],
+      parserOptions: {
+        parser: 'babel-eslint',
+        sourceType: 'module'
+      },
+      env: {
+        browser: true
+      }
+    },
+    {
+      files: ['**/*.spec.js'],
       parserOptions: {
         parser: 'babel-eslint',
         sourceType: 'module'

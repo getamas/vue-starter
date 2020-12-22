@@ -16,8 +16,6 @@ npm install
 
 # 4. Launch dev server, compiles and hot reloads for development.
 npm run serve
-
-# 5. Read the documentation below for "Setup and development".
 ```
 
 ## First-time setup
