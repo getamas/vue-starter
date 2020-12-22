@@ -1,17 +1,11 @@
+---
+to: "src/app/layouts/<%= name %>.vue"
+---
 <template>
   <div :class="$style.container">
-    <NavBar />
     <slot />
   </div>
 </template>
-
-<script>
-import NavBar from '@/app/components/NavBar.vue'
-
-export default {
-  components: { NavBar }
-}
-</script>
 
 <style lang="scss" module>
 .container {

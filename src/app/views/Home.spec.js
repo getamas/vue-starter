@@ -1,5 +1,4 @@
 import Home from './Home.vue'
-import PageTitle from '@/app/components/PageTitle/PageTitle.vue'
 
 describe('@views/home', () => {
   it('is a valid view', () => {
@@ -7,7 +6,7 @@ describe('@views/home', () => {
   })
 
   it('renders an element', () => {
-    const wrapper = shallowMount(Home)
-    expect(wrapper.findComponent(PageTitle).exists()).toBe(true)
+    const { element } = shallowMount(Home)
+    expect(element.textContent).toContain('Home Page')
   })
 })

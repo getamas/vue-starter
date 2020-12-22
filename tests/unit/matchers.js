@@ -20,8 +20,8 @@ customMatchers.toBeAComponent = function(options) {
   }
 }
 
-customMatchers.toBeAViewComponent = function(options) {
-  if (options.components && options.components.Layout) {
+customMatchers.toBeAViewComponent = function(options, mockInstance = {}) {
+  if (usesALayout() && definesAPageTitleAndDescription()) {
     return {
       message: () =>
         `expected ${this.utils.printReceived(
@@ -38,6 +38,26 @@ customMatchers.toBeAViewComponent = function(options) {
       pass: false
     }
   }
+
+  function usesALayout() {
+    return options.components && options.components.Layout
+  }
+
+  function definesAPageTitleAndDescription() {
+    if (!options.page) return false
+    const pageObject = typeof options.page === 'function' ? options.page.apply(mockInstance) : options.page
+    if (!Object.prototype.hasOwnProperty.call(pageObject, 'title')) return false
+    if (!pageObject.meta) return false
+    const hasMetaDescription = pageObject.meta.some(
+      metaObject => metaObject.name === 'description' && Object.prototype.hasOwnProperty.call(metaObject, 'content')
+    )
+    if (!hasMetaDescription) return false
+    return true
+  }
+}
+
+customMatchers.toBeAViewComponentUsing = function(options, mockInstance) {
+  return customMatchers.toBeAViewComponent.apply(this, [options, mockInstance])
 }
 
 customMatchers.toBeAVuexModule = function(options) {
