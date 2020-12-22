@@ -7,6 +7,23 @@ import camelCase from 'lodash/camelCase'
 const modulesCache = {}
 const storeData = { modules: {} }
 
+// Recursively get the namespace of a Vuex module, even if nested.
+function getNamespace(subtree, path) {
+  const directorySubTree = { ...subtree }
+
+  if (path.length === 1) return directorySubTree
+
+  const namespace = path.shift()
+
+  directorySubTree.modules[namespace] = {
+    modules: {},
+    namespaced: true,
+    ...subtree.modules[namespace]
+  }
+
+  return getNamespace(directorySubTree.modules[namespace], path)
+}
+
 ;(function updateModules() {
   // Allow us to dynamically require all Vuex module files.
   // https://webpack.js.org/guides/dependency-management/#require-context
@@ -59,22 +76,10 @@ const storeData = { modules: {} }
       // Update `storeData.modules` with the latest definitions.
       updateModules()
       // Trigger a hot update in the store.
+      // eslint-disable-next-line
       require('../index').default.hotUpdate({ modules: storeData.modules })
     })
   }
 })()
-
-// Recursively get the namespace of a Vuex module, even if nested.
-function getNamespace(subtree, path) {
-  if (path.length === 1) return subtree
-
-  const namespace = path.shift()
-  subtree.modules[namespace] = {
-    modules: {},
-    namespaced: true,
-    ...subtree.modules[namespace]
-  }
-  return getNamespace(subtree.modules[namespace], path)
-}
 
 export default storeData.modules

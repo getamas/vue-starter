@@ -5,13 +5,13 @@
 </template>
 
 <script>
-import appConfig from '@/app/app.config'
+import appConfig from '@/app/app.config.json'
 
 export default {
   page: {
     titleTemplate(title) {
-      title = typeof title === 'function' ? title(this.$store) : title
-      return title ? `${title} | ${appConfig.title}` : appConfig.title
+      const pageTitle = typeof title === 'function' ? title(this.$store) : title
+      return pageTitle ? `${pageTitle} | ${appConfig.title}` : appConfig.title
     }
   }
 }
