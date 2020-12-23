@@ -6,7 +6,7 @@
 
 ```bash
 # 1. Clone the repository.
-git clone https://github.com/getemas/vue-starter.git my-new-project
+git clone git@github.com:getamas/vue-starter.git my-new-project
 
 # 2. Enter your newly-cloned folder.
 cd my-new-project
