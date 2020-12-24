@@ -1,8 +1,9 @@
 <script>
 import NavBar from '@/app/components/nav-bar.vue'
+import VFragment from '@/app/components/global/VFragment'
 
 export default {
-  components: { NavBar }
+  components: { NavBar, VFragment }
 }
 </script>
 
