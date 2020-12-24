@@ -13,7 +13,6 @@
     "serve": "vue-cli-service serve --mode development",
     "build": "vue-cli-service build --mode production",
     "test:unit": "vue-cli-service test:unit",
-    "test:unit:watch": "npm test:unit --watch --notify --notifyMode change",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
     "new": "cross-env HYGEN_TMPLS=generators hygen new",
@@ -24,6 +23,10 @@
     "node": ">=10.13.3",
     "npm": ">=6"
   },
+  "pre-commit": [
+    "lint",
+    "test:unit"
+  ],
   "dependencies": {
     "axios": "^0.21.0",
     "core-js": "^3.6.5",
@@ -52,6 +55,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "hygen": "^6.0.4",
     "node-sass": "^4.12.0",
+    "pre-commit": "^1.2.2",
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11",
