@@ -7,10 +7,14 @@ export default {
 </script>
 
 <template>
-  <div :class="$style.container">
+  <v-fragment>
     <NavBar />
-    <slot />
-  </div>
+    <main>
+      <div :class="$style.container">
+        <slot />
+      </div>
+    </main>
+  </v-fragment>
 </template>
 
 <style lang="scss" module>
